@@ -1,2 +1,2 @@
 #!/bin/bash
-python3.8 -m py_compile $PYFILE
+python3.8 -B -O -m py_compile $PYFILE
