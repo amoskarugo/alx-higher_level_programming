@@ -1,6 +1,6 @@
 #!/usr/bin/python3.8
 
-def magic_calculator(a, b, c):
+def magic_calculation(a, b, c):
     if a < b:
         return c
     if c > b:
