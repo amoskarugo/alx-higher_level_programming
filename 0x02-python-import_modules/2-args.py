@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     if args_count > 1:
         print("{} argument:".format(args_count - 1) if args_count == 2 else
-              "{} arguments".format(args_count - 1))
+              "{} argument:".format(args_count - 1))
         for arg in range(1, args_count):
             print("{}: {}".format(arg, sys.argv[arg]))
     else:
