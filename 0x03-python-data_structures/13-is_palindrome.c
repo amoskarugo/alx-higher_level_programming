@@ -9,7 +9,7 @@ int is_palindrome(listint_t **head)
 {
 	if (head == NULL || *head == NULL)
 		return (1);
-	return (check_pal(head, *head));
+	return (check_(head, *head));
 }
 
 /**
@@ -18,11 +18,11 @@ int is_palindrome(listint_t **head)
  * @last: ptr to the end of the list
  * Return: 0 if not palindrom else 1
  */
-int check_pal(listint_t **head, listint_t *last)
+int check_(listint_t **head, listint_t *tail)
 {
-	if (last == NULL)
+	if (tail == NULL)
 		return (1);
-	if (check_pal(head, last->next) && (*head)->n == last->n)
+	if (check_(head, tail->next) && (*head)->n == tail->n)
 	{
 		*head = (*head)->next;
 		return (1);
