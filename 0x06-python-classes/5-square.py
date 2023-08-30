@@ -36,3 +36,5 @@ class Square:
             for i in range(s):
                 print("#", end="")
             print()
+        if s == 0:
+            print()
