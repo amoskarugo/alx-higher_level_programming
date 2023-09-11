@@ -13,6 +13,7 @@ Importing the class from the module:
 	Exception: area() is not implemented
 
 	>>> b.integer_validator("Distance", 12)
+
 	>>> b.integer_validator("Width", -2)
 	Traceback (most recent call last):
 		...
@@ -40,4 +41,15 @@ Importing the class from the module:
 	Traceback (most recent call last):
 		...
 	TypeError: integer_validator() missing 1 required positional argument: 'value'
-
+	>>> b.integer_validator("x", 7, 8)
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() takes 3 positional arguments but 4 were given
+	>>> b.area(2)
+	Traceback (most recent call last):
+		...
+	TypeError: area() takes 1 positional argument but 2 were given
+	>>> b.integer_validator("x", [1, 2, 3])
+	Traceback (most recent call last):
+		...
+	TypeError: x must be an integer
