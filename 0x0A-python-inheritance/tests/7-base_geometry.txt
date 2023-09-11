@@ -13,7 +13,6 @@ Importing the class from the module:
 	Exception: area() is not implemented
 
 	>>> b.integer_validator("Distance", 12)
-
 	>>> b.integer_validator("Width", -2)
 	Traceback (most recent call last):
 		...
@@ -53,3 +52,15 @@ Importing the class from the module:
 	Traceback (most recent call last):
 		...
 	TypeError: x must be an integer
+	>>> b.integer_validator("days", "100")
+	Traceback (most recent call last):
+		...
+	TypeError: days must be an integer
+	>>> b.integer_validator("y", (1, 7))
+	Traceback (most recent call last):
+		...
+	TypeError: y must be an integer
+	>>> b.integer_validator("j", {"a": 1, "b": 19})
+	Traceback (most recent call last):
+		...
+	TypeError: j must be an integer
