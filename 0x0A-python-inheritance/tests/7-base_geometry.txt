@@ -1,0 +1,43 @@
+The ``BaseGeometry module`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+Importing the class from the module:
+        >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+	>>> b = BaseGeometry()
+	>>> b.area()
+	Traceback (most recent call last):
+		...
+	Exception: area() is not implemented
+
+	>>> b.integer_validator("Distance", 12)
+	>>> b.integer_validator("Width", -2)
+	Traceback (most recent call last):
+		...
+	ValueError: Width must be greater than 0
+
+	>>> b.integer_validator("height", "x")
+	Traceback (most recent call last):
+		...
+	TypeError: height must be an integer
+
+	>>> b.integer_validator()
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+	>>> b.integer_validator("length")
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> b.integer_validator(None, None)
+	Traceback (most recent call last):
+		...
+	TypeError: None must be an integer
+	>>> b.integer_validator(None)
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
