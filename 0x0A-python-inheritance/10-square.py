@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-"""importing BaseGeometry & Rectangle"""
+"""BaseGeometry & Rectangle"""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__('9-rectangle').Rectangle
 
-"""Write a class square that inherites from rectangle"""
+"""class square that inherites rectangle"""
 
 
 class Square(Rectangle):
