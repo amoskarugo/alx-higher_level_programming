@@ -19,4 +19,4 @@ if __name__ == "__main__":
         j = []
 
     a.extend(lst)
-    save_to_json_file(a, name)
+    save_to_json_file(j, name)
