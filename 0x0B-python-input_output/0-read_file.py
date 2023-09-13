@@ -5,8 +5,5 @@
 
 def read_file(filename=""):
     """function that reads all the content of a file and prints on stdout"""
-    with open(filename, "r", encoding="utf-8") as f:
+    with open(filename) as f:
         print(f.read(), end="")
-
-
-read_file("test.txt")
