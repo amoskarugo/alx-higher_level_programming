@@ -18,5 +18,5 @@ if __name__ == "__main__":
     except FileNotFoundError:
         j = []
 
-    a.extend(lst)
+    j.extend(lst)
     save_to_json_file(j, name)
