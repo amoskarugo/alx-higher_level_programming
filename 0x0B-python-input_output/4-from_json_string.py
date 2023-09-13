@@ -4,4 +4,9 @@
 
 def from_json_string(my_str):
     """converts a JSON string to an object(python data structure)."""
-    return json.loads(my_str)
+    try:
+        json.loads(obj)
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+    else:
+        return json.loads(obj)
