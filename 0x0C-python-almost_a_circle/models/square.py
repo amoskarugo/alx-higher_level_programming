@@ -34,11 +34,6 @@ class Square(Rectangle):
         """a function that calculates the area of the Square"""
         return self.height * self.width
 
-    def display(self):
-        """Draws the Square on the stdout"""
-        for h in range(self.height):
-            print("#" * self.width)
-
     def update(self, *args, **kwargs):
         """
             Args:
