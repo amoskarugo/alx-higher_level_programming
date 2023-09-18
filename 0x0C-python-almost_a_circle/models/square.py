@@ -17,7 +17,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """returns the size"""
-        return self.height
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -59,3 +59,15 @@ class Square(Rectangle):
 
         return {'id': self.id, 'size': self.size,
                 'x': self.x, 'y': self.y}
+
+
+s1 = Square(5)
+print(s1)
+print(s1.size)
+s1.size = 10
+print(s1)
+
+try:
+    s1.size = "9"
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
