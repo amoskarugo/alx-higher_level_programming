@@ -36,6 +36,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file"""
         list_ = []
         obj_name = ""
         if list_objs:
@@ -49,6 +50,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """a function that returns a list pf JSON string representation"""
         if not json_string or json_string == []:
             return []
         else:
