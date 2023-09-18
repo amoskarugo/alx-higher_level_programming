@@ -134,5 +134,4 @@ class Rectangle(Base):
             for kwarg in kwargs:
                 if kwarg in d:
                     idx = d.index(f'{kwarg}')
-
                     setattr(self, d[idx], kwargs[f'{kwarg}'])
