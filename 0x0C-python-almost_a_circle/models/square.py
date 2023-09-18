@@ -7,8 +7,11 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-
+    """Implementation of class square which inherits from
+        rectangle class
+    """
     def __init__(self, size, x=0, y=0, id=None):
+        """inherits all the attributes of the super class"""
         super().__init__(size, size, x, y, id)
 
     @property
