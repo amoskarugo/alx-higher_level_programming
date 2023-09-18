@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """super class Base module"""
 import json
+import csv
 
 
 class Base:
@@ -67,3 +68,28 @@ class Base:
         dummy.update(**dictionary)
 
         return dummy
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """reads data from a CSV file and
+        returns a list of instantiated classes
+        """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r", newline="") as file:
+                if cls.__name__ == "Rectangle":
+                    # Depending on the class name, different fieldnames
+                    #  will be used for reading data from the CSV file
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                # reads data from the CSV file
+                list = csv.DictReader(file, fieldnames=fieldnames)
+
+                # convert the read dictionaries into a list of dictionaries
+                list = [dict([k, int(v)] for k, v in d.items())
+                        for d in list]
+                return [cls.create(**d) for d in list]
+        except IOError:
+
+            return []
