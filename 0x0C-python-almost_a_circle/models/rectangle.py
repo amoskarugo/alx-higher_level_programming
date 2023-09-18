@@ -45,7 +45,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """setter for private instance attribute with"""
+        """getter for private instance attribute width"""
         return self.__width
 
     @width.setter
@@ -91,8 +91,15 @@ class Rectangle(Base):
 
     def display(self):
         """Draws the rectangle on the stdout"""
-        for h in range(self.__height):
-            print("#" * self.__width)
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for n in range(self.__width + self.__x):
+                if n < self.__x:
+                    print(" ", end="")
+                    continue
+                print("#", end="")
+            print()
 
     def __str__(self):
         """overrides __str__ method and returns a formatted sting of
