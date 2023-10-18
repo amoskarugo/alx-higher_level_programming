@@ -1,2 +1,2 @@
---create a new database if does not exist
-CREATE BATABASE IF NOT EXIST hbtn_0c_0;
+-- script that creates database hbtn_0c_0 in MYSQL server.
+CREATE TABLE IF NOT EXISTS hbtn_0c_0;
