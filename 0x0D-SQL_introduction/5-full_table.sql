@@ -1,4 +1,4 @@
---prints full description of table "first_table"
---from database hbtn_oc_0 in MYSQL server.
+-- show full description of "first_table"
+-- from hbtn_0c_0 database in MYSQL server
 
 SHOW CREATE TABLE first_table;
