@@ -1,5 +1,5 @@
---displays the numbers of records with id=89
---from hbtn_0c_0 table
+-- displays the number of records with id=89
+-- in first_table from Database hbtn_0c_0 in MYSQL server.
 SELECT COUNT(*)
-FROM hbtn_0c_0
+FROM first_table
 WHERE id = 89;
