@@ -15,7 +15,7 @@ def list_():
     db = MySQLdb.connect(host='localhost', user=args[1],
                          passwd=args[2], db=args[3], port=3306)
     cur = db.cursor()
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;"
+    query = "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC;"
     cur.execute(query)
     results = cur.fetchall()
 
