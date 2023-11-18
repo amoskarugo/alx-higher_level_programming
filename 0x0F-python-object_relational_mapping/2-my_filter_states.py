@@ -16,7 +16,7 @@ def list_():
                          passwd=args[2], db=args[3], port=3306)
     cur = db.cursor()
 
-    cur.execute(f"SELECT * FROM states WHERE "
+    cur.execute(f"SELECT * FROM states WHERE BINARY "
                 f"name = '{'{}'.format(args[4])}' ORDER BY id ASC")
     results = cur.fetchall()
 
