@@ -9,7 +9,9 @@ args = sys.argv
 
 
 def list_():
-    """function fetches filtered data and prints it."""
+    """function fetches filtered data and prints it.
+        print all items with name starting with 'N'
+    """
     db = MySQLdb.connect(host='localhost', user=args[1],
                          passwd=args[2], db=args[3], port=3306)
     cur = db.cursor()
