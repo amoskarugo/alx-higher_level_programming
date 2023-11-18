@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """python script that connects to MySQL db and
-fetches data."""
+fetches data. Data is filtered by selecting items with the
+name starting with 'N' """
 import MySQLdb
 import sys
 
