@@ -17,7 +17,7 @@ def list_():
     cur = db.cursor()
 
     cur.execute(f"SELECT * FROM states WHERE "
-                f"name = '{args[4]}' ORDER BY id ASC")
+                f"name = '{'{}'.format(args[4])}' ORDER BY id ASC")
     results = cur.fetchall()
 
     for state in results:
