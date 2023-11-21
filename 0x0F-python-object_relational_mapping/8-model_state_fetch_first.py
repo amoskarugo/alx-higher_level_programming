@@ -24,4 +24,4 @@ if __name__ == '__main__':
     if first_obj:
         print("{}: {}".format(first_obj.id, first_obj.name))
     else:
-        print()
+        pass
