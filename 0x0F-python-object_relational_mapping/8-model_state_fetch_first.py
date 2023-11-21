@@ -19,9 +19,10 @@ if __name__ == '__main__':
 
     Base.metadata.create_all(engine)
 
-    first_obj = session.query(State).first()
+    first_obj = session.query(State).order_by(State.id).first()
 
     if first_obj:
         print("{}: {}".format(first_obj.id, first_obj.name))
     else:
-        pass
+        print("Nothing")
+    session.close()
