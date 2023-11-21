@@ -21,7 +21,6 @@ if __name__ == '__main__':
 
     session.add(State(name="Louisiana"))
     session.commit()
-    
     for state in session.query(State).all():
         if state.name == 'Louisiana':
             print("{}".format(state.id))
