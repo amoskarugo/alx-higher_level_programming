@@ -15,7 +15,7 @@ def list_():
                          passwd=args[2], db=args[3], port=3306)
     cur = db.cursor()
 
-    cur.execute("""SELECT cities.id, cities.name, states.name
+    cur.execute("""SELECT cities.name
                 FROM cities
                 JOIN states
                 ON states.id = cities.state_id
